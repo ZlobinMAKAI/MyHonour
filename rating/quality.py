@@ -1,14 +1,12 @@
+from dataBases.getValue import getTest_mark, getActivity, getTg_id
 
-
-def rank_counter():
+def rank_counter(tg_iD):
     active_k = 1  # коэффициент увеличения активности
     test_k = 1  # коэффициент увеличения тестов
 
-    print("Enter test points of student:")
-    test_points = int(input())  # балл студента за последний тест
+    test_points = int(getTest_mark(tg_iD)[0:2])  # балл студента за последний тест
 
-    print("Enter max test points of last test:")
-    max_test = int(input())
+    max_test = int(getTest_mark(tg_iD)[2:4])
 
     print("Enter active points of student:")
     active_points = int(input())  # сумма баллов за посещение мероприятий. 1 посещение = 10 баллов

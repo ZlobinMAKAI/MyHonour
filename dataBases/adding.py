@@ -15,7 +15,7 @@ def add_user(tg_iD,second_namE,first_namE):
         second_name = second_namE,
         first_name = first_namE,
         activity = 0,
-        mark_tests = 0
+        mark_tests = "0000"
     )
     session.add(some_user)
     session.commit()

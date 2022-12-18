@@ -14,7 +14,7 @@ class ActivityTable(Base):
     second_name = Column(String(12), nullable=False)
     first_name = Column(String(12), nullable=False)
     activity = Column(Integer, nullable=False)
-    mark_tests = Column(Integer, nullable=False)
+    mark_tests = Column(String(10), nullable=False)
 
 
 Base.metadata.create_all(engine)
