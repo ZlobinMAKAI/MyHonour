@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    int i = 9, a, j, A[10];
+    for(i = 0;i < 10;i++)
+    {
+        scanf("%d", &A[i]);
+    }
+    while(i > 0)
+    {
+        if(A[i] < A[i - 1])
+        {
+            a = A[i - 1];
+            A[i - 1] = A[i];
+            A[i] = a;
+            j = i;
+            if(i != 9 && A[i - 1] < A[i])
+            {
+                while(j <= 9)
+                {
+                    if(A[j + 1] < A[j])
+                    {
+                        a = A[j + 1];
+                        A[j + 1] = A[j];
+                        A[j] = a;
+                        j++;
+                    }
+                    else j = 10;
+                }
+             }
+            
+             i--;
+        }
+        else i--;
+    }
+for(i = 0;i < 10;i++)
+{
+    printf("%d ", A[i]);
+}
+    
+    return 0;
+}
